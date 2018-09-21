@@ -1,0 +1,20 @@
+<div style="float:left;margin:10px;">
+
+<!--interpolation-->
+<h2>{{heading}}</h2>
+
+{{returnString()}} <br>
+
+1+1 = {{1+1}}
+
+<!--propertybinding-->
+<img [src] = "imageUrl" height = 400 width =400>
+
+<!--event binding-->
+<h2>{{headingTwo}}</h2>
+<button type="button" (click)="clickEvent()">Click here!!</button>
+</div>
+
+<div style="float-right;margin:10px;">
+	<app-gotcharacter [imgUrlChild]="imageUrl"></app-gotcharacter>
+</div>

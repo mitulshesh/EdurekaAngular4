@@ -1,0 +1,27 @@
+
+<button type="button" (click)="toggleHeros()">Toggle Heros</button>
+<div *ngIf="showHeros">
+	<div *ngFor="let hero of dcHeros;let i=index" (click)="showRealName(hero);" appAppBold>
+
+		<span style="cursor: pointer;">{{i+1}} - {{hero}}</span>
+	
+	</div>
+</div>
+
+
+<div [ngSwitch]="heroName" [ngStyle]="myStyle">
+	<div *ngSwitchCase="'Batman'">Bruce Wayne</div>
+	<div *ngSwitchCase="'Superman'">Clarke kent</div>
+	<div *ngSwitchCase="'Wonder Woman'"> Princess Diana</div>
+	<div *ngSwitchCase="'Flash'">Barry Allen</div>
+	<div *ngSwitchCaseDefault>None is selected</div>
+</div>
+
+<div *ngIf="showHeros"><button type="button" (click)="setStyle()">Click here to change style</button></div>
+
+<h2 [ngClass]="currentCSSClass" (click)="changeCSS()">Change CSS Dynamically</h2>
+
+<h2 [style.color]="inputColor"> Change text color using ng model</h2>
+<input type="text" [(ngModel)]="inputColor">
+
+

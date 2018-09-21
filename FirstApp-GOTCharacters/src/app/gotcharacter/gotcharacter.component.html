@@ -1,0 +1,19 @@
+<ul class="list-group">
+	<li class="list-group-item">{{GOTCharacter[0]}}</li>
+	<li class="list-group-item">{{GOTCharacter[1]}}</li>
+	<li class="list-group-item">{{GOTCharacter[2]}}</li>
+	<li class="list-group-item">{{GOTCharacter[3]}}</li>
+	<br><br>
+</ul>
+
+<button type="button" class="btn btn-primary" (click)="switchFirstAndLastName()">Click to switch</button> &nbsp;&nbsp;
+	<button type="button" [disabled]="enableStopSwitch" class="btn btn-danger" (click)="stopSwitchFirstAndLast()">Click to stop switch</button>
+
+<!--two way data binding-->
+<br>
+<input type="text" [(ngModel)]="twoWayBinding">
+{{twoWayBinding}}	
+
+
+<!--pass property from one component to other-->
+<!-- <img src="{{imgUrlChild}}"> -->
